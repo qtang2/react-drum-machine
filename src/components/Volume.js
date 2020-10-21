@@ -3,6 +3,7 @@ import { Slider } from '@material-ui/core'
 import Grid from '@material-ui/core/Grid';
 import VolumeDown from '@material-ui/icons/VolumeDown';
 import VolumeUp from '@material-ui/icons/VolumeUp';
+import '../App.css'
 
 class Volume extends Component {
 
@@ -25,7 +26,7 @@ class Volume extends Component {
     render(){
         console.log("inital value" + this.state.volume)
         return (
-            <Grid container spacing={0.1}>
+            <Grid className="volume-container">
                 <Grid item>
                     <VolumeDown />
                 </Grid>

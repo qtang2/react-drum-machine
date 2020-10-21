@@ -53,7 +53,7 @@ class DrumPad extends Component {
     render(){
         return (
             <button className = "drum-pad" id={this.props.clipId} onClick={this.btnClicked} >
-                {this.props.keyTrigger}
+                <strong>{this.props.keyTrigger}</strong>
                 <audio src={this.props.clipUrl} id={this.props.keyTrigger} className="clip" />
             </button>
 

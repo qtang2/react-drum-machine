@@ -70,7 +70,7 @@ class App extends Component {
     this.state={
       power:true,
       currentText:'',
-      volume: 5
+      volume: 15
     }
 
     this.controlPower = this.controlPower.bind(this)
@@ -107,13 +107,20 @@ class App extends Component {
 
   render(){
     return (
-      <div className="App" id="drum-machine">
-        <PadBank bank = {bank} power={this.state.power} updateText= {this.updateText} volume={this.state.volume}/>
-        <div className="control-container">
-        <Power power={this.state.power} onClick={this.controlPower}/>
-        <Display text={this.state.currentText} />
-        <Volume value={this.state.volume} updateVolume={this.updateVolume}/>
-        </div>
+      <div className="App" >
+      <div id="drum-machine">
+        <div className='bank-container'>
+            <PadBank bank = {bank} power={this.state.power} updateText= {this.updateText} volume={this.state.volume}/>
+          </div>
+          
+          <div className="control-container">
+            <Power power={this.state.power} onClick={this.controlPower}/>
+            <Display text={this.state.currentText} />
+            <Volume value={this.state.volume} updateVolume={this.updateVolume}/>
+          </div>
+      </div>
+        
+        <label>© Qian Tang 2020</label>
       </div>
     );
   }

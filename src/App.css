@@ -1,24 +1,86 @@
-.App {
-  text-align: center;
+:root {
+  --padWidth: 100px;
+  --padHeight: 80px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#drum-machine {
+  display: flex;
+  align-items: center;
+  background-color: #f6d5bf;
+  width: 800px;
+  justify-content: center;
+  border-style: solid;
+  border-width: 3px;
+  border-color: tomato;
+}
+
+.bank-container {
+  flex: 1;
+  /* display: inline-block; */
+}
+
+.control-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* padding: 20px; */
+}
+
+.drum-pad {
+  box-shadow: 3px 3px 4px #000;
+  height: 80px;
+  width: 100px;
+  background-color: #816991;
+  margin: 7px;
+  border-radius: 3px;
+  box-shadow: wheat;
+  cursor: pointer;
+}
+
+#display {
+  width: 100px;
+  height: 40px;
+  background-color: #816991;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#text {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.volume-container {
+  display: flex;
+  align-items: center;
+  width: 300px;
+  /* background-color: cornflowerblue; */
+  margin-right: 20px;
 }
+@media screen and (max-width: 800px) {
+  #drum-machine {
+    flex-direction: column;
+    width: 350px;
+  }
 
-.drum-pad {
-  height: 80px;
-  width: 80px;
-  background-color: pink;
+  .drum-pad {
+    transform: scale(0.9);
+    margin: 3px;
+  }
+
+  .control-container {
+    margin-top: 25px;
+  }
 }

@@ -5,7 +5,7 @@ function Power(props) {
     
     return (
         <div>
-        <lable> Power</lable>
+        <lable><strong>POWER</strong></lable>
             <Switch size="small" checked={props.power} onChange={props.onClick} />
         </div>
         
