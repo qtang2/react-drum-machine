@@ -108,6 +108,8 @@ class App extends Component {
   render(){
     return (
       <div className="App" >
+      <h2>Welcome to Drum Machine</h2>
+      <p>Click to play OR press keyboard to play</p>
       <div id="drum-machine">
         <div className='bank-container'>
             <PadBank bank = {bank} power={this.state.power} updateText= {this.updateText} volume={this.state.volume}/>
